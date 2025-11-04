@@ -8,7 +8,7 @@ on:
 
 jobs:
   release:
-    uses: KUT0K1/pipeline-templates/.github/workflows/minecraft/release-mcpack.yml@main
+    uses: KUT0K1/pipeline-templates/.github/workflows/minecraft-release-mcpack.yml@main
     with:
       project_name: "Test"
       header_uuid: "123e4567-e89b-12d3-a456-426614174000"
