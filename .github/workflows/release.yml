@@ -7,6 +7,9 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     uses: KUT0K1/pipeline-templates/.github/workflows/minecraft-release-mcpack.yml@main
