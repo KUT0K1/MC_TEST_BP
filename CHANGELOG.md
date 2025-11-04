@@ -1,9 +1,9 @@
-# 0.1.0 (2025-11-04)
+# [0.2.0](https://github.com/KUT0K1/MC_TEST_BP/compare/v0.1.0...v0.2.0) (2025-11-04)
 
 
 ### Features
 
-* basic structure added ([29797f2](https://github.com/KUT0K1/MC_TEST_BP/commit/29797f2ca0a456495c3f649a1c01b3a779848924))
+* readme ([75eb0f6](https://github.com/KUT0K1/MC_TEST_BP/commit/75eb0f68d77b306881c4ec1ab2b85f7f2ea81a3f))
 
 
 
