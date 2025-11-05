@@ -28,8 +28,9 @@ jobs:
           path: pipeline-templates
 
       - name: Run MCPACK Release
-        uses: pipeline-templates/.github/actions/minecraft/release-mcpack
+        uses: ./pipeline-templates/.github/actions/minecraft/release-mcpack
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           project_name: "Test"
           header_uuid: "123e4567-e89b-12d3-a456-426614174000"
           module_uuid: "abcdefab-cdef-abcd-efab-cdefabcdef12"
