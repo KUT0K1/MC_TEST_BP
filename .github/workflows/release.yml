@@ -12,9 +12,24 @@ permissions:
 
 jobs:
   release:
-    uses: KUT0K1/pipeline-templates/.github/workflows/minecraft-release-mcpack.yml@master
-    with:
-      project_name: "Test"
-      header_uuid: "123e4567-e89b-12d3-a456-426614174000"
-      module_uuid: "abcdefab-cdef-abcd-efab-cdefabcdef12"
-    secrets: inherit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Checkout templates
+        uses: actions/checkout@v5
+        with:
+          repository: KUT0K1/pipeline-templates
+          token: ${{ secrets.PRIVATE_TEMPLATE_PAT }}
+          path: pipeline-templates
+
+      - name: Run MCPACK Release
+        uses: ./pipeline-templates/.github/actions/minecraft/release-mcpack
+        with:
+          project_name: "Test"
+          header_uuid: "123e4567-e89b-12d3-a456-426614174000"
+          module_uuid: "abcdefab-cdef-abcd-efab-cdefabcdef12"
